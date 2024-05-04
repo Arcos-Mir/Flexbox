@@ -1,0 +1,75 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #f2f2f2;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.contenedor {
+    width: 80%;
+    max-width: 700px;
+    height: 500px;
+    background: #212d40;
+    display: flex;
+    flex-direction: row;/* viene por defetcto se colocan las cajas
+    una a lado de la otra de manera ascendente si son numeros*/
+    /*flex-direction: row-reverse;  las cajas se posicionan de derecha a izquierda
+    de manera descendente si son numeros*/
+    /*flex-direction: column; los elementos se colocan en columnas de arriba hacia abajo*/
+    /*flex-direction: column-reverse; los elementos se colocan en columnas de abajo hacia arriba*/
+    flex-wrap: wrap; /* coloca los elementos en una nueva linea respetando los 
+    espacios y las medidas de las cajas o de los elementos*/
+    /*flex-wrap: no-wrap; los elementos tendran un ancho dinamico o flexible
+    para colocarse ya sea en una sola fila o una sola columna
+    en la cual los elementos tendran que cambiar de medidas para entrar en un espacio*/
+    
+    /*flex-flow: row wrap; atajo ´para suprimir codigo*/
+
+    /*justify-content: flex-start; por defecto posiciona los objetos de izquierda a
+    derecha*/
+    /*justify-content: flex-end; posiciona los elementos de derecha a izquierda
+    sin invertir la numeracion de las cajas si son numericas*/
+    /*justify-content: center;*/
+    justify-content: space-between; /* divide el espacio sobrante de los elementos y
+    los colca entre cada uno de ellos*/
+    /*justify-content: space-around;*/
+
+    /*align-items: flex-start; se alinean los elementos en la parte superior del contenedor
+    y viene por defecto*/
+    /*align-items: flex-end; los elementos se colocan al final del contenedor padre*/
+    /*align-items: center; centra los elementos*/
+    /*align-items: stretch; se omite el alto de las cajas hijos para que abarque
+    el 100% del alto del contenedor padre pero respetando el padding*/
+    /*align-items: baseline; alinea la caja de acuerdo al tamaño de la fuente de
+    la fuente de mayor altura*/
+
+    /*align-content: center; solo se utiliza content o items*/
+
+}
+
+.caja {
+    width: 100px;
+    height: 100px;
+    background: #f79256;
+    text-align: center;
+    margin: 20px;
+    padding: 20px;
+    font-size: 40px;
+    color: #fff;
+
+    /*order: ; se puede modificar el orden de los elementos o cajas*/
+
+    /*flex-grow: 1; abarcan el espacio disponible por ejemplo el 100% del contenedor*/
+    /*flex-shrink: 0; hace que los elementos o cajas conserven su tamaño sin hacerse
+    mas pequeños cuando se hace responsive la pagina*/
+    /*flex-basis: 200px;*/
+    flex: 1 1 auto;/*el primer valor es la proporcion de 1 para crecer, el siguente 
+    para poder hacerse mas pequeño  y el tercero que tendra un tamaño automatico*/
+
+    /*align-self: flex-end; se puede colocar utilizando una clase y colocandole esta
+    propiedad para colocar un solo elemento ya sea al inicio, final o centrado*/
+}
